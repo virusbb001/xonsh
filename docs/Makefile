@@ -17,7 +17,7 @@ DOCREPONAME = xonsh-docs
 DOCREPOURL  = git@github.com:xonsh/xonsh-docs.git
 DOCREPOBRANCH = gh-pages
 
-.PHONY: help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
+.PHONY: help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest gettext
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -29,6 +29,7 @@ help:
 	@echo "  qthelp    to make HTML files and a qthelp project"
 	@echo "  latex     to make LaTeX files, you can set PAPER=a4 or PAPER=letter"
 	@echo "  changes   to make an overview of all changed/added/deprecated items"
+	@echo "  gettext   to make gettext files"
 	@echo "  linkcheck to check all external links for integrity"
 	@echo "  doctest   to run all doctests embedded in the documentation (if enabled)"
 
@@ -81,6 +82,11 @@ changes:
 	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) $(BUILDDIR)/changes
 	@echo
 	@echo "The overview file is in $(BUILDDIR)/changes."
+
+gettext:
+	$(SPHINXBUILD) -b gettext $(ALLSPHINXOPTS) $(BUILDDIR)/gettext
+	@echo
+	@echo "Build finished. The gettext files are in $(BUILDDIR)/gettext."
 
 linkcheck:
 	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck

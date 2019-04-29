@@ -267,6 +267,10 @@ autosummary_generate = []
 # Prevent numpy from making silly tables
 numpydoc_show_class_members = False
 
+# Add i18n settings
+locale_dirs = ['locale/']
+gettext_compact = False
+
 
 #
 # Auto-generate some docs
