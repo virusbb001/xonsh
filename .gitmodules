@@ -1,0 +1,3 @@
+[submodule "docs/locale/ja"]
+	path = docs/locale/ja
+	url = https://github.com/virusbb001/xonsh.ja.po.git
